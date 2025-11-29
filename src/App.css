@@ -1,0 +1,46 @@
+@import "tailwindcss";
+
+body {
+  font-family: "Figtree", sans-serif;
+  background-color: #ffffff;
+}
+
+.animation-infinite {
+  animation: infiniteAnimation 25s infinite linear;
+  display: flex;
+  width: max-content;
+}
+
+.animation-infinite-reverse {
+  animation: infiniteAnimationReverse 25s infinite linear;
+  display: flex;
+  width: max-content;
+}
+
+.brands-container {
+  mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
+}
+
+@keyframes infiniteAnimation {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes infiniteAnimationReverse {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.animation-infinite:hover,
+.animation-infinite-reverse:hover {
+  animation-play-state: paused;
+}
