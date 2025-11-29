@@ -189,7 +189,7 @@ const Menu = () => {
       {
         isChange === 'productos' && (
           <div
-            className="absolute top-[8.4rem] left-0 w-full bg-white shadow"
+            className="absolute top-34.1 left-0 w-full bg-white shadow"
             onMouseEnter={() => handleIsShow('productos')}
             onMouseLeave={handleIsNotShow}
           >
