@@ -16,17 +16,29 @@ function App() {
   return (
     <BrowserRouter>
       <Menu />
-        <Routes>
-          <Route path='/' element={<Home />} />
-          <Route path='/publicaciones' element={<Publicaciones />} />
-          <Route path='/nosotros' element={<Nosotros />} />
-          <Route path='/productos' element={<Productos />} />
-          <Route path='/productos/:id' element={<ProductDetail />} />
-          <Route path='/mantenimiento-integral-maquinaria' element={<SrvMantIntegral />} />
-          <Route path='/venta-de-repuestos-oem' element={<SrvVentRepuestosOem />} />
-          <Route path='/innovacion-y-tecnologia' element={<SrvInnovTecnologia />} />
-        </Routes>
+      <Routes>
+        <Route path='/' element={<Home />} />
+        <Route path='/publicaciones' element={<Publicaciones />} />
+        <Route path='/nosotros' element={<Nosotros />} />
+        <Route path='/productos' element={<Productos />} />
+        <Route path='/productos/:id' element={<ProductDetail />} />
+        <Route path='/mantenimiento-integral-maquinaria' element={<SrvMantIntegral />} />
+        <Route path='/venta-de-repuestos-oem' element={<SrvVentRepuestosOem />} />
+        <Route path='/innovacion-y-tecnologia' element={<SrvInnovTecnologia />} />
+      </Routes>
       <Footer />
+      <a
+        href="https://wa.me/51951758040?text=Hola%20TSCH%2C%20requiero%20informaci%C3%B3n%20sobre%20sus%20productos."
+        target="_blank"
+        rel="noreferrer"
+        className="fixed bottom-6 right-6 z-50"
+      >
+        <img
+          src="/images/whatsapp.png"
+          alt="WhatsApp"
+          className="w-14 h-14 cursor-pointer"
+        />
+      </a>
     </BrowserRouter>
   )
 }
