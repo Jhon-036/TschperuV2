@@ -114,8 +114,8 @@ const Menu = () => {
             }
           </Link>
         </ul>
-        <div className="flex items-center max-xl:gap-6">
-          <button onClick={handleShowModal} className="px-6 py-2 cursor-pointer bg-[#f9c121] rounded transition hover:bg-[#ffd86e] text-[#254168]">Contáctanos</button>
+        <div className="flex items-center max-xl:gap-6 max-sm:gap-4 ">
+          <button onClick={handleShowModal} className="px-6 py-2 max-sm:px-4  cursor-pointer bg-[#f9c121] rounded transition hover:bg-[#ffd86e] text-[#254168]">Contáctanos</button>
 
           {/* MOVIL ICON*/}
           <section className="xl:hidden" onClick={handleMenuResponsive}>
