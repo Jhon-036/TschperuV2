@@ -41,47 +41,56 @@ const ProductDetail = () => {
   if (!product) return <p className="p-8">Producto no encontrado.</p>
 
   return (
-    <main className="h-[calc(100vh-134px)] py-12 max-lg:py-0 bg-[#f8f8f8] ">
-      <Container className={'flex h-full max-lg:py-16 items-center justify-center'}>
-        <section className="flex gap-20 max-lg:flex-col-reverse">
-          <div className="w-[35rem] max-lg:w-auto">
+    <main className="bg-[#f8f8f8] min-h-dvh py-8 md:pt-32">
+      <Container className="max-w-6xl mx-auto px-4">
+        <section className="flex flex-col md:flex-row gap-8 md:gap-20">
+          {/* Imagen */}
+          <div className="w-full md:w-[35rem] flex justify-center">
             <img
               src={product.image}
               alt={product.name}
-              className="w-full rounded"
+              className="w-full max-w-md rounded object-contain"
             />
           </div>
-          <div className="w-[26rem] max-xl:w-[20rem]">
-            <h1 className="text-2xl font-semibold mb-2 uppercase">{product.name}</h1>
-            <p className="text-sm text-gray-500 mb-4">Part No. :{product.partno}</p>
-            <div className="flex flex-col">
-              <p className="uppercase font-semibold">Descripción:</p>
-              <p className="mb-4">{product.description}</p>
+
+          {/* Texto */}
+          <div className="w-full md:w-[26rem]">
+            <h1 className="text-xl md:text-2xl font-semibold mb-2 uppercase">
+              {product.name}
+            </h1>
+
+            <p className="text-xs md:text-sm text-gray-500 mb-4">
+              Part No. : {product.partno}
+            </p>
+
+            <div className="flex flex-col mb-4">
+              <p className="uppercase font-semibold text-sm">Descripción:</p>
+              <p className="break-words">{product.description}</p>
             </div>
-            <div className="py-4 border-b border-t border-gray-300">
-              <p className="uppercase font-semibold">Categoría:</p>
+
+            <div className="py-3 md:py-4 border-y border-gray-300">
+              <p className="uppercase font-semibold text-sm">Categoría:</p>
               <p>{product.category}</p>
             </div>
-            <div
-              className="w-full bg-[#f9bf21] hover:bg-[#f7c746] mt-8 transition text-[#254168] text-center py-1 rounded cursor-pointer"
-              onClick={handleOpenModal}  
+
+            <button
+              onClick={handleOpenModal}
+              className="w-full bg-[#f9bf21] hover:bg-[#f7c746] mt-6 md:mt-8 transition text-[#254168] text-center py-2 rounded cursor-pointer font-semibold text-sm md:text-base"
             >
-              <button
-                className="cursor-pointer"
-              >Cotizar</button>
-            </div>
+              Cotizar
+            </button>
           </div>
         </section>
       </Container>
-      {
-        openModal && product && (
-          <ModalShop
-            product={product}
-            closeModal={handleCloseModal}
-          />
-        )
-      }
+
+      {openModal && product && (
+        <ModalShop
+          product={product}
+          closeModal={handleCloseModal}
+        />
+      )}
     </main>
+
   )
 }
 

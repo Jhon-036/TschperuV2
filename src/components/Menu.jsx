@@ -119,7 +119,7 @@ const Menu = () => {
 
           {/* MOVIL ICON*/}
           <section className="xl:hidden" onClick={handleMenuResponsive}>
-            {isMenuResponsive ? <X color="#254168"/> : <MenuIcon color="#254168"/>}
+            {isMenuResponsive ? <X color="#254168" /> : <MenuIcon color="#254168" />}
           </section>
         </div>
 
@@ -135,23 +135,63 @@ const Menu = () => {
       `}>
         <Container>
           <ul className="uppercase text-[#254168] flex flex-col items-center gap-2 py-4">
-            <Link to={'/'} onClick={handleMenuResponsive} className="p-2">Inicio</Link>
-            <Link to={'/publicaciones'} onClick={handleMenuResponsive} className="p-2">Publicaciones</Link>
-            <Link to={'/nosotros'} onClick={handleMenuResponsive} className="p-2">Nosotros</Link>
-            <Link to={'/productos'} onClick={handleMenuResponsive} className="p-2">Productos</Link>
-            <Link onClick={handleSubMenuService} className="p-2 flex flex-col items-center ">
-              <div className="flex items-center gap-2">
+            <Link to="/" onClick={handleMenuResponsive} className="p-2">Inicio</Link>
+            <Link to="/publicaciones" onClick={handleMenuResponsive} className="p-2">Publicaciones</Link>
+            <Link to="/nosotros" onClick={handleMenuResponsive} className="p-2">Nosotros</Link>
+            <Link to="/productos" onClick={handleMenuResponsive} className="p-2">Productos</Link>
+
+            {/* Item Servicios + submenú */}
+            <li className="p-2 flex flex-col items-center">
+              <button
+                type="button"
+                onClick={handleSubMenuService}
+                className="flex p-2 items-center gap-2 uppercase"
+              >
                 <p>Servicios</p>
-                {subMenu ? <ChevronUp size={16} strokeWidth={2.75} /> : <ChevronDown size={16} strokeWidth={2.75}/> }
+                {subMenu
+                  ? <ChevronUp size={16} strokeWidth={2.75} />
+                  : <ChevronDown size={16} strokeWidth={2.75} />
+                }
+              </button>
+
+              {/* SUBMENÚ ANIMADO */}
+              <div
+                className={`
+          flex flex-col pt-2 gap-2 items-center
+          overflow-hidden
+          transition-all duration-300 ease-out
+          ${subMenu
+                    ? "max-h-40 opacity-100 translate-y-0"
+                    : "max-h-0 opacity-0 -translate-y-2 pointer-events-none"
+                  }
+        `}
+              >
+                <Link
+                  to="/mantenimiento-integral-maquinaria"
+                  onClick={handleMenuResponsive}
+                  className="uppercase p-2"
+                >
+                  Mantenimiento integral de maquinaria
+                </Link>
+                <Link
+                  to="/venta-de-repuestos-oem"
+                  onClick={handleMenuResponsive}
+                  className="uppercase p-2"
+                >
+                  Venta de repuestos oem
+                </Link>
+                <Link
+                  to="/innovacion-y-tecnologia"
+                  onClick={handleMenuResponsive}
+                  className="uppercase p-2"
+                >
+                  Innovación y tecnología
+                </Link>
               </div>
-              <div className={`flex flex-col pt-4 gap-4 items-center ${subMenu ? 'block' : 'hidden'}`}>
-                <Link to={'/mantenimiento-integral-maquinaria'} onClick={handleMenuResponsive}>Mantenimiento Integral de maquinaria</Link>
-                <Link to={'/venta-de-repuestos-oem'} onClick={handleMenuResponsive}>Venta de repuestos oem</Link>
-                <Link to={'/innovacion-y-tecnologia'} onClick={handleMenuResponsive}>Innovación y tecnología</Link>
-              </div>
-            </Link>
+            </li>
           </ul>
         </Container>
+
       </section>
 
 
