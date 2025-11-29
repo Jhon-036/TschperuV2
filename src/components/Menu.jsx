@@ -158,7 +158,7 @@ const Menu = () => {
               <div
                 className={`
           flex flex-col pt-2 gap-2 items-center
-          overflow-hidden
+          overflow-hidden text-center
           transition-all duration-300 ease-out
           ${subMenu
                     ? "max-h-40 opacity-100 translate-y-0"
