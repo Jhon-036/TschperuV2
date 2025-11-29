@@ -37,8 +37,8 @@ const CarruselHero = () => {
                 </div>
                 <div className="absolute bg-[#2f2f2f67] top-0 left-0 w-full h-full">
                   <Container className={'flex h-[inherit] items-center'}>
-                    <div className="flex flex-col gap-2 text-white px-4 w-[55%]">
-                      <p className="uppercase text-shadow-lg font-bold text-5xl leading-[4rem] ">{data.title}</p>
+                    <div className="flex flex-col gap-2 text-white px-4 w-[55%] max-md:w-full max-md:text-center max-md:px-0">
+                      <p className="uppercase text-shadow-lg font-bold text-5xl max-md:text-4xl leading-[4rem] ">{data.title}</p>
                       <span className="text-shadow-lg font-semibold text-[22px] pt-5">{data.description}</span>
                       <div className="pt-12">
                         <Link to={data.url} className="px-6 py-2.5 cursor-pointer bg-[#f9c121] rounded transition hover:bg-[#ffd86e] text-[#254168]">Ver más</Link>
@@ -52,11 +52,11 @@ const CarruselHero = () => {
         }
 
         {/* ICONOS PERSONALIZADOS */}
-        <div className="button-prev-slide absolute flex left-0 top-1/2 z-50 p-3 ml-5 bg-[#ffffffcc] hover:bg-[#ffffff] transition rounded-full cursor-pointer">
-          <img src="/images/flecha-izquierda.png" alt="Tsch - flecha izquierda" className="w-[28px]"/>
+        <div className="button-prev-slide absolute flex left-0 top-1/2 z-50 p-3 max-lg:p-2.5 ml-5 bg-[#ffffffcc] hover:bg-[#ffffff] transition rounded-full cursor-pointer">
+          <img src="/images/flecha-izquierda.png" alt="Tsch - flecha izquierda" className="w-[28px] max-lg:w-[18px]"/>
         </div>
-        <div className="button-next-slide absolute flex right-0 top-1/2 z-50 p-3 mr-5 bg-[#ffffffcc] hover:bg-[#ffffff] transition rounded-full cursor-pointer">
-          <img src="/images/flecha-derecha.png" alt="Tsch - flecha derecha" className="w-[28px]"/>
+        <div className="button-next-slide absolute flex right-0 top-1/2 z-50 p-3 max-lg:p-2.5 mr-5 bg-[#ffffffcc] hover:bg-[#ffffff] transition rounded-full cursor-pointer">
+          <img src="/images/flecha-derecha.png" alt="Tsch - flecha derecha" className="w-[28px] max-lg:w-[18px]"/>
         </div>
       </Swiper>
     </section>

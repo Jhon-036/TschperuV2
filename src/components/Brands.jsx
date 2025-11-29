@@ -16,7 +16,7 @@ const Brands = () => {
                     <img
                       src={brands.source}
                       alt={brands.name}
-                      className="w-[9rem] h-[9rem] object-contain"
+                      className="w-[9rem] h-[9rem] max-md:w-[7rem] max-md:h-[7rem] object-contain"
                     />
                   </div>
                 ))}
@@ -29,7 +29,7 @@ const Brands = () => {
                     <img
                       src={brands.source}
                       alt={brands.name}
-                      className="w-[9rem] h-[9rem] object-contain"
+                      className="w-[9rem] h-[9rem] max-md:w-[7rem] max-md:h-[7rem] object-contain"
                     />
                   </div>
                 ))}
