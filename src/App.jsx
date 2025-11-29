@@ -10,12 +10,14 @@ import SrvMantIntegral from './pages/SrvMantIntegral'
 import SrvVentRepuestosOem from './pages/SrvVentRepuestosOem'
 import SrvInnovTecnologia from './pages/SrvInnovTecnologia'
 import ProductDetail from './components/ProductDetail'
+import ScrollToTop from './components/ScrollToTop'
 
 function App() {
 
   return (
     <BrowserRouter>
       <Menu />
+      <ScrollToTop />
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/publicaciones' element={<Publicaciones />} />

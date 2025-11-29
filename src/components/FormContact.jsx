@@ -29,7 +29,7 @@ const FormContact = () => {
   }
 
   return (
-    <div className="rounded p-12 bg-[#f8f8f8] max-md:p-4">
+    <div className="rounded p-12 bg-[#f8f8f8] max-md:px-6">
       <h2 className="text-2xl text-center">Contáctanos</h2>
       <p className="text-lg pb-6 text-center">Completa el formulario y te responderemos a la brevedad.</p>
 

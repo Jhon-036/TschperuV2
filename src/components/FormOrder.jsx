@@ -70,7 +70,7 @@ const FormOrder = ({ closeModal, product }) => {
       onSubmit={onSubmitForm}
       className="flex flex-col gap-6"
     >
-      <div className="flex gap-6">
+      <div className="flex gap-6 max-md:flex-wrap">
         <div className="flex flex-col w-full">
           <label className="pb-2">Nombre :</label>
           <input
@@ -104,7 +104,7 @@ const FormOrder = ({ closeModal, product }) => {
         />
       </div>
 
-      <div className="flex gap-6">
+      <div className="flex gap-6 max-md:flex-wrap">
         <div className="flex flex-col w-full">
           <label className="pb-2">Teléfono :</label>
           <input

@@ -115,7 +115,8 @@ const Menu = () => {
           </Link>
         </ul>
         <div className="flex items-center max-xl:gap-6 max-sm:gap-4 ">
-          <button onClick={handleShowModal} className="px-6 py-2 max-sm:px-4  cursor-pointer bg-[#f9c121] rounded transition hover:bg-[#ffd86e] text-[#254168]">Contáctanos</button>
+          <button onClick={handleShowModal} className="px-6 py-2 max-sm:px-4  cursor-pointer bg-[#f9c121] rounded transition hover:bg-[#ffd86e] text-[#254168]"
+          >Contáctanos</button>
 
           {/* MOVIL ICON*/}
           <section className="xl:hidden" onClick={handleMenuResponsive}>
@@ -267,7 +268,7 @@ const Menu = () => {
         showModal && (
           <div className="absolute top-0 left-0 w-full h-screen bg-[#00000070]">
             <Container className={'flex justify-center items-center h-screen'}>
-              <div className="bg-white rounded w-[50%] relative">
+              <div className="bg-white rounded  relative">
                 <FormContact />
                 <div onClick={handleNotModal} className="absolute top-5 right-5 cursor-pointer">
                   <X color="#254168" />

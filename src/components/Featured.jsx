@@ -48,7 +48,7 @@ const Featured = () => {
             }
           </div>
           <div className="pt-2">
-            <a className="text-[#2162a1] hover:text-[#0c3353] text-sm" href="">Ver todas las categorías</a>
+            <Link to={'/productos'} className="text-[#2162a1] hover:text-[#0c3353] text-sm">Ver todas las categorías</Link>
           </div>
         </Container>
       </section>
@@ -68,7 +68,7 @@ const Featured = () => {
             }
           </div>
           <div className="pt-2">
-            <a className="text-[#2162a1] hover:text-[#0c3353] text-sm" href="">Ver todos los productos</a>
+            <Link to={'/productos'} className="text-[#2162a1] hover:text-[#0c3353] text-sm" href="">Ver todos los productos</Link>
           </div>
         </Container>
       </section>
