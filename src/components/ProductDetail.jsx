@@ -65,7 +65,7 @@ const ProductDetail = () => {
 
             <div className="flex flex-col mb-4">
               <p className="uppercase font-semibold text-sm">Descripción:</p>
-              <p className="break-words">{product.description}</p>
+              <p className="break-words whitespace-pre-line">{product.description}</p>
             </div>
 
             <div className="py-3 md:py-4 border-y border-gray-300">

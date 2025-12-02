@@ -19,7 +19,7 @@ const ProductCard = ({ product, handleOpenModal }) => {
             <p>{product.name}</p>
             <span className="text-xs text-[#25416866]">{product.category}</span>
             <span className="block text-xs pb-1 text-gray-400">Part. No. : {product.partno}</span>
-            <p>{product.description}</p>
+            <p className="whitespace-pre-line">{product.description}</p>
           </div>
         </Link>
         <div
